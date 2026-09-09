@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Jay",
+    "destination": "6125551000",
+    "type": "blind"
+  },
+  {
+    "label": "Reception",
+    "destination": "6125551001",
+    "type": "blind"
+  },
+  {
+    "label": "Audiology",
+    "destination": "6125551002",
+    "type": "consult"
+  },
+  {
+    "label": "Customer Service",
+    "destination": "6125551003",
+    "type": "blind"
+  }
+]
