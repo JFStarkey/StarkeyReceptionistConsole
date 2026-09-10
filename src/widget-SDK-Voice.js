@@ -180,38 +180,52 @@ class StarkeyReceptionistConsole extends HTMLElement {
 
 }
 
-    async loadButtons() {
+async loadButtons() {
 
-        try {
+    try {
 
-            const response =
-                await fetch(
-                    "./buttons.json"
-                );
+        console.log(
+            "STEP 1 - Loading buttons"
+        );
 
-            const buttons =
-    await response.json();
-
-console.log(
-    "Starkey Buttons Loaded:",
-    buttons
-);
-
-this.renderButtons(
-    buttons
-);
-
-
-        }
-        catch(error) {
-
-            console.error(
-                "Failed loading buttons",
-                error
+        const response =
+            await fetch(
+                "https://jfstarkey.github.io/StarkeyReceptionistConsole/buttons.json"
             );
 
-        }
+        console.log(
+            "STEP 2 - Response:",
+            response.status
+        );
+
+        const buttons =
+            await response.json();
+
+        console.log(
+            "STEP 3 - Buttons:",
+            buttons
+        );
+
+        this.renderButtons(
+            buttons
+        );
+
+        console.log(
+            "STEP 4 - Render complete"
+        );
+
     }
+    catch(error) {
+
+        console.error(
+            "BUTTON LOAD FAILED"
+        );
+
+        console.error(error);
+
+    }
+
+}
 renderButtons(buttons) {
 
     const container =
