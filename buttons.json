@@ -1,14 +1,22 @@
 [
-  {
-    "label": "Audiology",
-    "destination": "6125551001"
-  },
-  {
-    "label": "Billing",
-    "destination": "6125551002"
-  },
-  {
-    "label": "Support",
-    "destination": "6125551003"
-  }
+    {
+        "label": "Audiology",
+        "destination": "6125551001"
+    },
+    {
+        "label": "Billing",
+        "destination": "6125551002"
+    },
+    {
+        "label": "Sales",
+        "destination": "6125551003"
+    },
+    {
+        "label": "Support",
+        "destination": "6125551004"
+    },
+    {
+        "label": "Returns",
+        "destination": "6125551005"
+    }
 ]
