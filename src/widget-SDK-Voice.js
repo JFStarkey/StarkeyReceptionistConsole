@@ -123,4 +123,78 @@ class StarkeyReceptionistConsole extends HTMLElement {
 
     }
 
+    async loadButtons() {
+
+        try {
+
+            const response =
+                await fetch(
+                    "./buttons.json"
+                );
+
+            const buttons =
+    await response.json();
+
+console.log(
+    "Starkey Buttons Loaded:",
+    buttons
+);
+
+this.renderButtons(
+    buttons
+);
+
+
+        }
+        catch(error) {
+
+            console.error(
+                "Failed loading buttons",
+                error
+            );
+
+        }
+    }
+renderButtons(buttons) {
+
+    const container =
+        this.shadowRoot.getElementById(
+            "buttonContainer"
+        );
+
+    container.innerHTML = "";
+
+    buttons.forEach(button => {
+
+        const tile =
+            document.createElement(
+                "div"
+            );
+
+        tile.classList.add(
+            "transferTile"
+        );
+
+        tile.innerHTML = `
+            <div class="logo">
+                ★
+            </div>
+
+            <div class="label">
+                ${button.label}
+            </div>
+        `;
+
+        container.appendChild(
+            tile
+        );
+
+    });
+
 }
+}
+
+customElements.define(
+    "sa-ds-voice-sdk",
+    StarkeyReceptionistConsole
+);
