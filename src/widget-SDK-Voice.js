@@ -39,7 +39,7 @@ template.innerHTML = `
 
     background-color: #fff;
 
-    background-image: url("./starkey-star.png");
+    background-image: url("https://jfstarkey.github.io/StarkeyReceptionistConsole/starkey-star.png");
 
     background-repeat: no-repeat;
 
