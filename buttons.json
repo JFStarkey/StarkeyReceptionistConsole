@@ -1,22 +1,118 @@
 [
-    {
-        "label": "Audiology",
-        "destination": "6125551001"
-    },
-    {
-        "label": "Billing",
-        "destination": "6125551002"
-    },
-    {
-        "label": "Sales",
-        "destination": "6125551003"
-    },
-    {
-        "label": "Support",
-        "destination": "6125551004"
-    },
-    {
-        "label": "Returns",
-        "destination": "6125551005"
-    }
+  {
+    "label": "StarkeyAudiology 2075",
+    "destination": "19529474511"
+  },
+  {
+    "label": "StarkeyCustomerService 2000",
+    "destination": "19529474602"
+  },
+  {
+    "label": "StarkeyTechSupport 2067",
+    "destination": "19529474704"
+  },
+  {
+    "label": "AudibelCustomerService 2050",
+    "destination": "19529474734"
+  },
+  {
+    "label": "MEProAudiology 6841",
+    "destination": "19529474538"
+  },
+  {
+    "label": "MEProCustomerService 6837",
+    "destination": "19529474868"
+  },
+  {
+    "label": "MEProTechSupport 6828",
+    "destination": "19529474569"
+  },
+  {
+    "label": "GovernmentCS 2012",
+    "destination": "19529185863"
+  },
+  {
+    "label": "Credit 2023",
+    "destination": "19529474673"
+  },
+  {
+    "label": "StartHearing 7104",
+    "destination": "9529185633"
+  },
+  {
+    "label": "StarkeyConsumer 2476",
+    "destination": "19528289103"
+  },
+  {
+    "label": "SoundGearHearingAids 6111",
+    "destination": "19529474674"
+  },
+  {
+    "label": "AllMakeRepair 2003",
+    "destination": "19529474588"
+  },
+  {
+    "label": "CanadaCS English 4270",
+    "destination": "4270"
+  },
+  {
+    "label": "CashApp FinancialHub 2170",
+    "destination": "2170"
+  },
+  {
+    "label": "Cigna SH 7103",
+    "destination": "19529185680"
+  },
+  {
+    "label": "Batteries 2002",
+    "destination": "19529474756"
+  },
+  {
+    "label": "Calibration EQUIP 2361",
+    "destination": "19529474589"
+  },
+  {
+    "label": "Managers 5850",
+    "destination": "19529474745"
+  },
+  {
+    "label": "NuEar 9832",
+    "destination": "18002117790"
+  },
+  {
+    "label": "NuEarCSMR 9833",
+    "destination": "18002117801"
+  },
+  {
+    "label": "ORT IIR 2006",
+    "destination": "19529956673"
+  },
+  {
+    "label": "SGHAConsumer 6222",
+    "destination": "19529474709"
+  },
+  {
+    "label": "StarkeyCentral Prosite 5557",
+    "destination": "19529185557"
+  },
+  {
+    "label": "VAConsumer 2025",
+    "destination": "19529185861"
+  },
+  {
+    "label": "InsideSales 2007",
+    "destination": "19529474992"
+  },
+  {
+    "label": "SoundGear 5018",
+    "destination": "9528289144"
+  },
+  {
+    "label": "StarkeyCares SH 7100",
+    "destination": "8558007971"
+  },
+  {
+    "label": "HumanResources",
+    "destination": "9522853936"
+  }
 ]

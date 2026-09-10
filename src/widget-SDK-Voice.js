@@ -1,5 +1,10 @@
 import { Desktop } from "@wxcc-desktop/sdk";
 
+const logger =
+    Desktop.logger.createLogger(
+        "StarkeyReceptionistConsole"
+    );
+
 const template = document.createElement("template");
 
 template.innerHTML = `
@@ -24,27 +29,33 @@ template.innerHTML = `
     gap:12px;
 }
 
-.transferTile{
+.transferTile {
 
-    min-height:120px;
+    min-height: 140px;
 
-    border:2px solid #F2B500;
+    border: 2px solid #F2B500;
 
-    border-radius:12px;
+    border-radius: 16px;
 
-    background:#ffffff;
+    background-color: #fff;
 
-    cursor:pointer;
+    background-image: url("./starkey-star.png");
 
-    transition:.2s;
+    background-repeat: no-repeat;
 
-    display:flex;
+    background-position: -20px center;
 
-    flex-direction:column;
+    background-size: 90%;
 
-    justify-content:center;
+    cursor: pointer;
 
-    align-items:center;
+    transition: .2s;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
 }
 
 .transferTile:hover{
@@ -65,18 +76,64 @@ template.innerHTML = `
     margin-bottom:10px;
 }
 
-.label{
+.label {
 
-    font-family:Poppins,sans-serif;
+    display:flex;
 
-    font-size:18px;
+    flex-direction:column;
+
+    justify-content:center;
+
+    width:100%;
+
+    height:100%;
+
+    box-sizing:border-box;
+
+    padding-left:95px;
+
+    padding-right:15px;
+	
+	position:relative;
+
+	top:15px;
+
+}
+
+.queueName {
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#003B71;
+
+    line-height:1.2;
+
+}
+
+.queueExtension {
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+    font-size:16px;
 
     font-weight:600;
 
     color:#003B71;
 
-    text-align:center;
+    margin-top:4px;
+
+    text-align:right;
+
 }
+
 
 </style>
 
@@ -89,10 +146,6 @@ template.innerHTML = `
 </div>
 `;
 
-const logger =
-    Desktop.logger.createLogger(
-        "StarkeyReceptionistConsole"
-    );
 
 class StarkeyReceptionistConsole extends HTMLElement {
 
@@ -117,11 +170,15 @@ class StarkeyReceptionistConsole extends HTMLElement {
 
     async init() {
 
-        Desktop.config.init();
+    console.log(
+        "Starkey Receptionist Console"
+    );
 
-        await this.loadButtons();
+    Desktop.config.init();
 
-    }
+    await this.loadButtons();
+
+}
 
     async loadButtons() {
 
@@ -175,15 +232,40 @@ renderButtons(buttons) {
             "transferTile"
         );
 
-        tile.innerHTML = `
-            <div class="logo">
-                ★
-            </div>
+        const parts = button.label.split(" ");
 
-            <div class="label">
-                ${button.label}
-            </div>
-        `;
+		let name;
+		let extension = "";
+
+		if (
+			parts.length > 1 &&
+    /^\d+$/.test(parts[parts.length - 1])
+) {
+
+    extension = parts.pop();
+
+    name = parts.join(" ");
+
+}
+else {
+
+    name = button.label;
+
+}
+
+tile.innerHTML = `
+    <div class="label">
+
+        <div class="queueName">
+            ${name}
+        </div>
+
+        <div class="queueExtension">
+    ${extension || "&nbsp;"}
+		</div>
+
+    </div>
+`;
 
         container.appendChild(
             tile
