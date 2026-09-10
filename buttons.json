@@ -1,22 +1,14 @@
 [
   {
-    "label": "Jay",
-    "destination": "6125551000",
-    "type": "blind"
-  },
-  {
-    "label": "Reception",
-    "destination": "6125551001",
-    "type": "blind"
-  },
-  {
     "label": "Audiology",
-    "destination": "6125551002",
-    "type": "consult"
+    "destination": "6125551001"
   },
   {
-    "label": "Customer Service",
-    "destination": "6125551003",
-    "type": "blind"
+    "label": "Billing",
+    "destination": "6125551002"
+  },
+  {
+    "label": "Support",
+    "destination": "6125551003"
   }
 ]
