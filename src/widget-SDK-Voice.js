@@ -17,7 +17,45 @@ template.innerHTML = `
 }
 
 .container{
+
     padding:12px;
+
+    height:100%;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    box-sizing:border-box;
+
+}
+
+.container::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+.container::-webkit-scrollbar-track {
+
+    background: #f1f1f1;
+
+    border-radius: 10px;
+
+}
+
+.container::-webkit-scrollbar-thumb {
+
+    background: #003B71;
+
+    border-radius: 10px;
+
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+
+    background: #00264d;
+
 }
 
 #buttonContainer{
