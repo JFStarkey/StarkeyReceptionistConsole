@@ -1,23 +1,14 @@
-import express from "express";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-import fs from "fs";
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Starkey Receptionist Console</title>
+</head>
+<body>
 
-const app = express();
-const port = process.env.PORT || 5000;
+    <sa-ds-voice-sdk></sa-ds-voice-sdk>
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+    <script srcdle.jsscript>
 
-console.log("ROOT:", __dirname);
-
-const bundlePath = join(__dirname, "build", "bundle.js");
-
-console.log("BUNDLE EXISTS:", fs.existsSync(bundlePath));
-console.log("BUNDLE PATH:", bundlePath);
-
-app.use(express.static(__dirname));
-
-app.listen(port, () => {
-  console.log("listening on 5000");
-});
+</body>
+</html>
