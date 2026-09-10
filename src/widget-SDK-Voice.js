@@ -248,38 +248,55 @@ renderButtons(buttons) {
 
         const parts = button.label.split(" ");
 
-		let name;
-		let extension = "";
+        let name;
+        let extension = "";
 
-		if (
-			parts.length > 1 &&
-    /^\d+$/.test(parts[parts.length - 1])
-) {
+        if (
+            parts.length > 1 &&
+            /^\d+$/.test(parts[parts.length - 1])
+        ) {
 
-    extension = parts.pop();
+            extension = parts.pop();
 
-    name = parts.join(" ");
+            name = parts.join(" ");
 
-}
-else {
+        }
+        else {
 
-    name = button.label;
+            name = button.label;
 
-}
+        }
 
-tile.innerHTML = `
-    <div class="label">
+        tile.innerHTML = `
+            <div class="label">
 
-        <div class="queueName">
-            ${name}
-        </div>
+                <div class="queueName">
+                    ${name}
+                </div>
 
-        <div class="queueExtension">
-    ${extension || "&nbsp;"}
-		</div>
+                <div class="queueExtension">
+                    ${extension || "&nbsp;"}
+                </div>
 
-    </div>
-`;
+            </div>
+        `;
+
+        tile.addEventListener(
+            "click",
+            () => {
+
+                console.log(
+                    "Transfer Clicked:",
+                    button.label,
+                    button.destination
+                );
+
+                this.transferToDN(
+                    button.destination
+                );
+
+            }
+        );
 
         container.appendChild(
             tile
@@ -288,6 +305,71 @@ tile.innerHTML = `
     });
 
 }
+
+async getInteractionId() {
+
+    const currentTaskMap =
+        await Desktop.actions.getTaskMap();
+
+    for (const iterator of currentTaskMap) {
+
+        return iterator[1]
+            .interactionId;
+
+    }
+
+}
+
+async transferToDN(phoneDN) {
+
+    try {
+
+        const interactionId =
+            await this.getInteractionId();
+
+        console.log(
+            "Transfering to:",
+            phoneDN
+        );
+
+        const response =
+            await Desktop.agentContact
+                .blindTransfer({
+
+                    interactionId,
+
+                    data: {
+
+                        destAgentId:
+                            phoneDN,
+
+                        mediaType:
+                            "telephony",
+
+                        destinationType:
+                            "DN"
+
+                    }
+
+                });
+
+        console.log(
+            "Transfer successful",
+            response
+        );
+
+    }
+    catch(error) {
+
+        console.error(
+            "Transfer failed",
+            error
+        );
+
+    }
+
+}
+
 }
 
 customElements.define(
