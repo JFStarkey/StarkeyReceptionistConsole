@@ -1,2 +1,2 @@
-# ReceptionistTransferWidget
-ReceptionistTransferWidget
+# StarkeyReceptionistConsole
+StarkeyReceptionistConsole
