@@ -28,6 +28,8 @@ template.innerHTML = `
 
     box-sizing:border-box;
 
+    background-color:#003B71;
+
 }
 
 .container::-webkit-scrollbar {
@@ -77,14 +79,6 @@ template.innerHTML = `
 
     background-color: #fff;
 
-    background-image: url("https://jfstarkey.github.io/StarkeyReceptionistConsole/starkey-star.png");
-
-    background-repeat: no-repeat;
-
-    background-position: -20px center;
-
-    background-size: 90%;
-
     cursor: pointer;
 
     transition: .2s;
@@ -122,20 +116,17 @@ template.innerHTML = `
 
     justify-content:center;
 
+    align-items:center;
+
     width:100%;
 
     height:100%;
 
     box-sizing:border-box;
 
-    padding-left:95px;
+    padding:15px;
 
-    padding-right:15px;
-	
-	position:relative;
-
-	top:15px;
-
+    position:relative;
 }
 
 .queueName {
@@ -152,9 +143,19 @@ template.innerHTML = `
 
     line-height:1.2;
 
+    text-align:center;
+
 }
 
-.queueExtension {
+.queueExtension 
+
+{
+
+    position:absolute;
+
+    bottom:12px;
+
+    right:12px;
 
     font-family:
         "Segoe UI",
@@ -165,10 +166,6 @@ template.innerHTML = `
     font-weight:600;
 
     color:#003B71;
-
-    margin-top:4px;
-
-    text-align:right;
 
 }
 
