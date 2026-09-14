@@ -144,7 +144,7 @@ template.innerHTML = `
         "Segoe UI",
         sans-serif;
 
-    font-size:20px;
+    font-size:25px;
 
     font-weight:700;
 
