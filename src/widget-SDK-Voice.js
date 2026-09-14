@@ -28,7 +28,7 @@ template.innerHTML = `
 
     box-sizing:border-box;
 
-    background-color:#003B71;
+    background-color:#fff;
 
 }
 
@@ -162,7 +162,7 @@ template.innerHTML = `
 
     font-weight:600;
 
-    color:#003B71;
+    color:#fff;
 
 }
 
