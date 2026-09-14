@@ -28,6 +28,8 @@ template.innerHTML = `
 
     box-sizing:border-box;
 
+    background-color:#003B71;
+
 }
 
 .container::-webkit-scrollbar {
@@ -54,7 +56,7 @@ template.innerHTML = `
 
 .container::-webkit-scrollbar-thumb:hover {
 
-    background: #00264d;
+    background: #fff;
 
 }
 
@@ -75,15 +77,7 @@ template.innerHTML = `
 
     border-radius: 16px;
 
-    background-color: #fff;
-
-    background-image: url("https://jfstarkey.github.io/StarkeyReceptionistConsole/starkey-star.png");
-
-    background-repeat: no-repeat;
-
-    background-position: -20px center;
-
-    background-size: 90%;
+    background-color: #00264d;
 
     cursor: pointer;
 
@@ -122,19 +116,17 @@ template.innerHTML = `
 
     justify-content:center;
 
+    align-items:center;
+
     width:100%;
 
     height:100%;
 
     box-sizing:border-box;
 
-    padding-left:95px;
+    padding:15px;
 
-    padding-right:15px;
-	
-	position:relative;
-
-	top:15px;
+    position:relative;
 
 }
 
@@ -144,17 +136,23 @@ template.innerHTML = `
         "Segoe UI",
         sans-serif;
 
-    font-size:80px;
+    font-size:25px;
 
     font-weight:700;
 
-    color:#003B71;
+    color:#fff;
 
     line-height:1.2;
 
 }
 
 .queueExtension {
+
+    position:absolute;
+
+    bottom:12px;
+
+    right:12px;
 
     font-family:
         "Segoe UI",
@@ -165,10 +163,6 @@ template.innerHTML = `
     font-weight:600;
 
     color:#003B71;
-
-    margin-top:4px;
-
-    text-align:right;
 
 }
 
