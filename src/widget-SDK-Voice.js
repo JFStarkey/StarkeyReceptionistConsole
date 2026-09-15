@@ -71,7 +71,7 @@ template.innerHTML = `
 
 .transferTile {
 
-    min-height: 140px;
+    min-height: 110px;
 
     border: 2px solid #F2B500;
 
