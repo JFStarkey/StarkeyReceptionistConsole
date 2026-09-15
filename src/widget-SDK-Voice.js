@@ -150,9 +150,9 @@ template.innerHTML = `
 
     position:absolute;
 
-    bottom:12px;
+    bottom:5px;
 
-    right:12px;
+    right:15px;
 
     font-family:
         "Segoe UI",
