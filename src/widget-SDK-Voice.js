@@ -66,12 +66,12 @@ template.innerHTML = `
 
     grid-template-columns:repeat(5, 1fr);
 
-    gap:12px;
+    gap:8px;
 }
 
 .transferTile {
 
-    min-height: 110px;
+    min-height: 95px;
 
     border: 2px solid #F2B500;
 
