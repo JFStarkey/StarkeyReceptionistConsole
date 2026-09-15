@@ -28,7 +28,7 @@ template.innerHTML = `
 
     box-sizing:border-box;
 
-    background-color:#a9a9a9;
+    background-color:##FDFEFF;
 
 }
 
