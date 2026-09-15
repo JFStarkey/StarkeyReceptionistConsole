@@ -18,7 +18,7 @@ template.innerHTML = `
 
 .container{
 
-    padding:12px;
+    padding:10px;
 
     height:100%;
 
