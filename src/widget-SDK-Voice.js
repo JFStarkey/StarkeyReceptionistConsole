@@ -379,7 +379,7 @@ async transferToDN(phoneDN) {
                             "telephony",
 
                         destinationType:
-                            "DN"
+                            "EP-DN"
 
                     }
 
